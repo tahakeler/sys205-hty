@@ -2,7 +2,7 @@
 You will be writing several programs to process the `.hty` file format, an application-specific file format for data analytics.
 
 ## Acknowledgement
-*This assessment is inspired from a part of [Project 1](https://15721.courses.cs.cmu.edu/spring2023/project1.html) of the CMU 15-721 Advanced Database System (Fall 23) course.*
+*This assessment is inspired from a part of [Project 1](https://15721.courses.cs.cmu.edu/spring2023/project1.html) of the CMU 15-721 Advanced Database System (Spring' 23) course.*
 
 ## The `.hty` File Format
 The `.hty` file format is a columnar file format (to be precise, it is PAX (or *partition attribute across*)), similarly to the famous [Apache Parquet](https://parquet.apache.org/), and [Apache ORC](https://orc.apache.org/). The file is specifically used to store columns of data. However, to accelerate data analytical tasks, the file groups multiple columns together into a *column group*. Usually, columns that are used together will be grouped in the same group.
