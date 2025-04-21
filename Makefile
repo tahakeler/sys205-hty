@@ -1,10 +1,13 @@
-convert: src/csv_to_hty.cpp
-	g++ -std=c++20 \
-		-o bin/convert.out \
-		src/csv_to_hty.cpp;
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall -Wextra -I./third_party
 
-analyze: src/analyze.cpp
-	g++ -std=c++20 \
-		-o bin/analyze.out \
-		src/analyze.cpp;
+SRC_DIR = src
+BIN_DIR = bin
 
+all: csv_to_hty analyze
+
+csv_to_hty: $(SRC_DIR)/csv_to_hty.cpp
+	$(CXX) $(CXXFLAGS) -o $(BIN_DIR)/csv_to_hty $(SRC_DIR)/csv_to_hty.cpp
+
+analyze: $(SRC_DIR)/analyze.cpp
+	$(CXX) $(CXXFLAGS) -o $(BIN_DIR)/analyze $(SRC_DIR)/analyze.cpp
